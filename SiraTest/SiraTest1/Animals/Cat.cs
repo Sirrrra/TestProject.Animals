@@ -5,18 +5,18 @@ using System.Text;
 
 namespace SiraTest1.Animals
 {
-    public class Dog : PlayableAnimal
+    public class Cat : PlayableAnimal
     {
         public Head Head;
         public Body Body;
         public Tail Tail;
         public Leg[] Legs;
 
-        public Dog() : base(typeof(Dog))
+        public Cat() : base(typeof(Cat))
         {
         }
 
-        public Dog(string name) : base(name, typeof(Dog))
+        public Cat(string name) : base(name, typeof(Cat))
         {
         }
 

@@ -5,18 +5,18 @@ using System.Text;
 
 namespace SiraTest1.Animals
 {
-    public class Dog : PlayableAnimal
+    public class Fish : Animal
     {
         public Head Head;
         public Body Body;
         public Tail Tail;
-        public Leg[] Legs;
+        public Fin[] Fins;
 
-        public Dog() : base(typeof(Dog))
+        public Fish() : base(typeof(Fish))
         {
         }
 
-        public Dog(string name) : base(name, typeof(Dog))
+        public Fish(string name) : base(name, typeof(Fish))
         {
         }
 
@@ -25,10 +25,10 @@ namespace SiraTest1.Animals
             Head = new Head();
             Body = new Body();
             Tail = new Tail();
-            Legs = new Leg[4];
-            for (int i = 0; i < Legs.Length; i++)
+            Fins = new Fin[3];
+            for (int i = 0; i < Fins.Length; i++)
             {
-                Legs[i] = new Leg();
+                Fins[i] = new Fin();
             }
         }
     }
