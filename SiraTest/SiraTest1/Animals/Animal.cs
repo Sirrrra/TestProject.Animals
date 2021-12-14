@@ -10,6 +10,8 @@ namespace SiraTest1.Animals
 
         protected Type Type;
 
+        public Sex Sex = Sex.Undefined;
+
         public bool IsWild => string.IsNullOrEmpty(Name);
 
         public Animal(Type type)

@@ -11,7 +11,8 @@ namespace SiraTest1
         {
             typeof(Cat),
             typeof(Dog),
-            typeof(Fish)
+            typeof(Fish),
+            typeof(Whale)
         };
 
         public static List<Animal> Perform(int count)

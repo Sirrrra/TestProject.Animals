@@ -9,11 +9,12 @@ namespace SiraTest1
         {
             Console.WriteLine("Hello! Its animal creator program!\n");
 
-            //var dog1 = new Dog("Pes1");
+            var dog1 = new Dog("Pes1");
             //dog1.Play();
             //dog1.Name = "Pes2";
-            //dog1.Head.Eat("chicken");
+            dog1.Head.Eat("chicken");
 
+            /*
             var zoo = AnimalGenerator.Perform(100);
 
             zoo.ForEach(iterationObject => {
@@ -22,6 +23,10 @@ namespace SiraTest1
                     (iterationObject as PlayableAnimal).Play();
                 }
             });
+            */
+
+            var whale = new Whale();
+
         }
     }
 }
