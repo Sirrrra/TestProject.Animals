@@ -28,8 +28,10 @@ namespace SiraTest1.Animals
             Fins = new Fin[3];
             for (int i = 0; i < Fins.Length; i++)
             {
-                Fins[3] = new Fin();
+                Fins[i] = new Fin();
             }
         }
+
+        public override int GetLimbsAmount() => Fins.Length + 1;
     }
 }

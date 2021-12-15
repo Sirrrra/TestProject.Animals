@@ -31,5 +31,7 @@ namespace SiraTest1.Animals
                 Fins[i] = new Fin();
             }
         }
+
+        public override int GetLimbsAmount() => Fins.Length + 1;
     }
 }

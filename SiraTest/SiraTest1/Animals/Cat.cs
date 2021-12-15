@@ -31,5 +31,7 @@ namespace SiraTest1.Animals
                 Legs[i] = new Leg();
             }
         }
+
+        public override int GetLimbsAmount() => Legs.Length + 1;
     }
 }

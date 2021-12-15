@@ -23,5 +23,7 @@ namespace SiraTest1.Animals
             Head = new Head();
             Body = new Body();
         }
+
+        public override int GetLimbsAmount() => 0;
     }
 }

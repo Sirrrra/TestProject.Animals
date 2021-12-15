@@ -9,6 +9,7 @@ namespace SiraTest1.Animals
     {
         public Head Head;
         public Body Body;
+        public Tail Tail;
         public Wing[] Wings;
         public Leg[] Legs;
 
@@ -22,7 +23,8 @@ namespace SiraTest1.Animals
         public override void CreateBodyParts()
         {
             Head = new Head();
-            Body = new Body();
+            Body = new Body(); 
+            Tail = new Tail();
             Wings = new Wing[2];
             for (int i = 0; i < Wings.Length; i++)
             {
@@ -34,5 +36,7 @@ namespace SiraTest1.Animals
                 Legs[x] = new Leg();
             }
         }
+
+        public override int GetLimbsAmount() => Legs.Length + Wings.Length + 1;
     }
 }

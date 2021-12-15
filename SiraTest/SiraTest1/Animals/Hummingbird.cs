@@ -5,18 +5,19 @@ using System.Text;
 
 namespace SiraTest1.Animals
 {
-    public class Chicken : Animal
+    public class Hummingbird : Animal
     {
         public Head Head;
         public Body Body;
+        public Tail Tail;
         public Wing[] Wings;
         public Leg[] Legs;
 
-        public Chicken() : base(typeof(Chicken))
+        public Hummingbird() : base(typeof(Hummingbird))
         {
         }
 
-        public Chicken(string name) : base(name, typeof(Chicken))
+        public Hummingbird(string name) : base(name, typeof(Hummingbird))
         {
         }
 
@@ -24,18 +25,19 @@ namespace SiraTest1.Animals
         {
             Head = new Head();
             Body = new Body();
+            Tail = new Tail();
             Wings = new Wing[2];
             for (int i = 0; i < Wings.Length; i++)
             {
                 Wings[i] = new Wing();
             }
             Legs = new Leg[2];
-            for (int x = 0; x < Legs.Length; x++)
+            for (int x = 0; x < Wings.Length; x++)
             {
                 Legs[x] = new Leg();
             }
         }
 
-        public override int GetLimbsAmount() => Legs.Length + Wings.Length;
+        public override int GetLimbsAmount() => Legs.Length + Wings.Length + 1;
     }
 }

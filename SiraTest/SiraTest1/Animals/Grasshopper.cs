@@ -35,5 +35,7 @@ namespace SiraTest1.Animals
                 Legs[x] = new Leg();
             }
         }
+
+        public override int GetLimbsAmount() => Legs.Length + Wings.Length;
     }
 }
