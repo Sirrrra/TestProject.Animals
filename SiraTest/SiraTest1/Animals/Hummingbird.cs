@@ -13,6 +13,12 @@ namespace SiraTest1.Animals
         public Wing[] Wings;
         public Leg[] Legs;
 
+        public override Sex[] GetAvailableSexes() => new Sex[]
+        {
+            Sex.Male,
+            Sex.Female
+        };
+
         public Hummingbird() : base(typeof(Hummingbird))
         {
         }

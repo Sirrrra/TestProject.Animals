@@ -1,5 +1,7 @@
 ﻿using SiraTest1.Animals;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SiraTest1
 {
@@ -20,15 +22,31 @@ namespace SiraTest1
             
             var zoo = AnimalGenerator.Perform(50);
 
-            zoo.ForEach(iterationObject => {
-                if (iterationObject is PlayableAnimal)
-                {
-                    (iterationObject as PlayableAnimal).Play();
-                }
+            var femaleZoo = zoo.Where(x => x.Sex == Sex.Female);
+
+            var firstMiddle = zoo.FirstOrDefault(x => x.Sex == Sex.Middle);
+
+            var zooSexes = zoo.Select(x => new TestClass(x.Sex).GetSexString()).ToList();
+
+            var single = zoo.Single(x => x.IsWild);
+
+            zoo.ForEach(x => {
+                Console.WriteLine($"Type : {x.GetType().Name}. Sex : {x.Sex.ToString()}");
             });
-            
+        }
+    }
 
+    public class TestClass
+    {
+        public Sex _sex { get; set; }
+        public TestClass(Sex sex)
+        {
+            _sex = sex;
+        }
 
+        public string GetSexString()
+        {
+            return $"Sex : {_sex.ToString()}";
         }
     }
 }

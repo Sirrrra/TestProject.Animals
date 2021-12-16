@@ -11,6 +11,12 @@ namespace SiraTest1.Animals
         public Body Body;
         public Leg[] Legs;
 
+        public override Sex[] GetAvailableSexes() => new Sex[]
+        {
+            Sex.Male,
+            Sex.Female
+        };
+
         public Frog() : base(typeof(Frog))
         {
         }

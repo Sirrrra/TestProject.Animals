@@ -11,6 +11,10 @@ namespace SiraTest1.Animals
         protected Type Type;
 
         public Sex Sex = Sex.Undefined;
+
+        public abstract Sex[] GetAvailableSexes();
+
+        //public static Sex[] Sex = (Sex[])Enum.GetValues(typeof(Sex));
         public bool IsWild => string.IsNullOrEmpty(Name);
 
         public Animal(Type type)

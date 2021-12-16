@@ -12,6 +12,12 @@ namespace SiraTest1.Animals
         public Tail Tail;
         public Fin[] Fins;
 
+        public override Sex[] GetAvailableSexes() => new Sex[]
+        {
+            Sex.Female,
+            Sex.Middle
+        };
+
         public Whale() : base(typeof(Whale))
         {
         }

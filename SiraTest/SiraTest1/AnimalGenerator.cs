@@ -8,6 +8,7 @@ namespace SiraTest1
 {
     public class AnimalGenerator
     {
+        public static Sex[] Sex = (Sex[])Enum.GetValues(typeof(Sex));
         public static List<Type> animals => new List<Type>
         {
             typeof(Cat),
@@ -23,25 +24,22 @@ namespace SiraTest1
             typeof(Snake)
         };
 
-       /* public enum Sex 
-        {
-            Undefined,
-            Male,
-            Female,
-            Middle
-        }*/
         public static List<Animal> Perform(int count)
         {
             var result = new List<Animal>();
             var randomizer = new Random();
-            //var sexRandomizer = new Random();
-            //var sexIndex1 = Enum.GetValues(typeof(Sex));
-
             for (int i = 0; i < count; i++)
             {
                 var animalIndex = randomizer.Next(0, 11);
-                //     var sexIndex = sexRandomizer.Next(0, 4);
-                var tempAnimal = Activator.CreateInstance(animals[animalIndex]); //, sexIndex1.GetValue(sexIndex));
+                var tempAnimal = Activator.CreateInstance(animals[animalIndex]);
+
+                var availableSexes = tempAnimal.GetType().GetMethod("GetAvailableSexes").Invoke(tempAnimal, null);
+
+                var sexRundomizer = new Random();
+                var sexIndex = sexRundomizer.Next(0, (availableSexes as Sex[]).Length);
+
+                (tempAnimal as Animal).Sex = (availableSexes as Sex[])[sexIndex];
+
                 result.Add(tempAnimal as Animal);
             }
 
