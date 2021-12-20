@@ -4,7 +4,11 @@ using System.Text;
 
 namespace SiraTest1.BodyParts
 {
-    public class Fin
+    public class Fin : Limb
     {
+        public override void Propel()
+        {
+            Console.WriteLine($"Fin is moving");
+        }
     }
 }

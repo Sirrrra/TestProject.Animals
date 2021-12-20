@@ -15,11 +15,13 @@ namespace SiraTest1
             //dog1.Play();
             //dog1.Name = "Pes2";
             //dog1.Head.Eat("chicken");
-            //var cat1 = new Cat("Kitty");
+            var cat1 = new Cat("Kitty");
+            cat1.Move();
+            var snake = new Snake();
             //cat1.Move();
             //Console.WriteLine($"Limbs count {cat1.GetLimbsAmount().ToString()}");
 
-            
+            /*
             var zoo = AnimalGenerator.Perform(50);
 
             var femaleZoo = zoo.Where(x => x.Sex == Sex.Female);
@@ -32,7 +34,7 @@ namespace SiraTest1
 
             zoo.ForEach(x => {
                 Console.WriteLine($"Type : {x.GetType().Name}. Sex : {x.Sex.ToString()}");
-            });
+            });*/
         }
     }
 

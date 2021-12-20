@@ -8,7 +8,7 @@ namespace SiraTest1.Animals
     {
         public string Name;
 
-        protected Type Type;
+        public Type Type;
 
         public Sex Sex = Sex.Undefined;
 
@@ -36,6 +36,8 @@ namespace SiraTest1.Animals
 
         public abstract int GetLimbsAmount();
 
+        public abstract void Move();
+
         public void Sleep()
         {
             if (!IsWild)
@@ -45,18 +47,6 @@ namespace SiraTest1.Animals
             else
             {
                 Console.WriteLine($"{Type.Name} is sleeping");
-            }
-        }
-
-        public void Move()
-        {
-            if (!IsWild)
-            {
-                Console.WriteLine($"{Type.Name} {Name} is moving!");
-            }
-            else
-            {
-                Console.WriteLine($"{Type.Name} is moving!");
             }
         }
     }

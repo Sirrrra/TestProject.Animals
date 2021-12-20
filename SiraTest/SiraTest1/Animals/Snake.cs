@@ -9,6 +9,7 @@ namespace SiraTest1.Animals
     {
         public Head Head;
         public Body Body;
+        public Tail Tail;
 
         public override Sex[] GetAvailableSexes() => new Sex[]
         {
@@ -29,8 +30,9 @@ namespace SiraTest1.Animals
         {
             Head = new Head();
             Body = new Body();
+            Tail = new Tail();
         }
 
-        public override int GetLimbsAmount() => 0;
+        public override int GetLimbsAmount() => 1;
     }
 }

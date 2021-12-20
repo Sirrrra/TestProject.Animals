@@ -39,5 +39,10 @@ namespace SiraTest1.Animals
         }
 
         public override int GetLimbsAmount() => Legs.Length + 1;
+        public override void Move()
+        {
+
+        }
+
     }
 }

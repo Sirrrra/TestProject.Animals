@@ -4,7 +4,11 @@ using System.Text;
 
 namespace SiraTest1.BodyParts
 {
-    public class Leg
+    public class Leg : Limb
     {
+        public override void Propel()
+        {
+            Console.WriteLine($"Leg is moving");
+        }
     }
 }
