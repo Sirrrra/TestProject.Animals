@@ -34,5 +34,10 @@ namespace SiraTest1.Animals
         }
 
         public override int GetLimbsAmount() => 1;
+
+        public override void Move()
+        {
+            Tail.Propel();
+        }
     }
 }

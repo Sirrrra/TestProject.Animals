@@ -18,6 +18,9 @@ namespace SiraTest1
             var cat1 = new Cat("Kitty");
             cat1.Move();
             var snake = new Snake();
+            snake.Move();
+            var parrot1 = new Parrot();
+            parrot1.Move();
             //cat1.Move();
             //Console.WriteLine($"Limbs count {cat1.GetLimbsAmount().ToString()}");
 

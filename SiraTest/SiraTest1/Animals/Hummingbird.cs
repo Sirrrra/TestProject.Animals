@@ -45,5 +45,17 @@ namespace SiraTest1.Animals
         }
 
         public override int GetLimbsAmount() => Legs.Length + Wings.Length + 1;
+
+        public override void Move()
+        {
+            for (int i = 0; i < Legs.Length; i++)
+            {
+                Legs[i].Propel();
+            }
+            for (int x = 0; x < Wings.Length; x++)
+            {
+                Wings[x].Propel();
+            }
+        }
     }
 }
